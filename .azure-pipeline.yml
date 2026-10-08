@@ -1,9 +1,13 @@
-tigger:
- - main
+trigger:
+  - main
 
 pool:
-    vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
-step:
-  shell:
-    echo "Hello, World!"
+steps:
+  - script: |
+      echo "Hello from Azure Pipelines with Ubuntu agent!"
+      mkdir -p myfolder
+      echo "hello world" > myfolder/hello.txt
+      cat myfolder/hello.txt
+    displayName: "Hello World"

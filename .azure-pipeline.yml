@@ -1,0 +1,9 @@
+tigger:
+ - main
+
+pool:
+    vmImage: 'ubuntu-latest'
+
+step:
+  shell:
+    echo "Hello, World!"
